@@ -1,6 +1,6 @@
 {
 	"name": "@micro-service/client",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "index.js",
 	"repository": "https://github.com/MoonTory/micro-string.git",
 	"author": "Gustavo Quinta | MoonTory <gustavoqnt40@gmail.com>",
