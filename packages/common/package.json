@@ -1,0 +1,31 @@
+{
+	"name": "@micro-string/common",
+	"version": "0.0.1",
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"repository": "https://github.com/MoonTory/micro-string.git",
+	"author": "Gustavo Quinta | MoonTory <gustavoqnt40@gmail.com>",
+	"license": "UNLICENSED",
+	"private": true,
+	"scripts": {
+		"build": "rimraf ./dist && tsc",
+		"build:watch": "rimraf ./dist && tsc -watch",
+		"lint": "eslint src/**/*.ts",
+		"lint:fix": "prettier-eslint src/**/*.ts --write"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^1.6.0",
+		"@typescript-eslint/parser": "^1.6.0",
+		"eslint": "^5.16.0",
+		"eslint-config-prettier": "^4.1.0",
+		"eslint-plugin-prettier": "^3.0.1",
+		"prettier": "^1.17.0",
+		"prettier-eslint": "^8.8.2",
+		"prettier-eslint-cli": "^4.7.1",
+		"rimraf": "^2.6.3",
+		"ts-node": "^8.1.0",
+		"ts-node-dev": "^1.0.0-pre.32",
+		"typescript": "^3.4.4"
+	},
+	"dependencies": {}
+}

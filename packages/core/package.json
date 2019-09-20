@@ -1,0 +1,36 @@
+{
+  "name": "@micro-string/core",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/MoonTory/micro-string.git",
+  "author": "Gustavo Quinta | MoonTory <gustavoqnt40@gmail.com>",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "node -r esm -r dotenv/config dist/bin/.",
+    "start:dev": "ts-node-dev --respawn -r dotenv/config src/bin/.",
+    "build": "tsc",
+    "build:watch": "tsc -watch",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "prettier-eslint src/**/*.ts --write"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/mongoose": "^5.5.17",
+    "@types/node": "^12.7.5",
+    "@typescript-eslint/eslint-plugin": "^2.3.0",
+    "@typescript-eslint/parser": "^2.3.0",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "ts-node": "^8.4.1",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@micro-string/common": "^0.0.1",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1"
+  }
+}
