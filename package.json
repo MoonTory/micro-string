@@ -1,0 +1,21 @@
+{
+  "name": "micro-string",
+  "private": true,
+  "repository": "https://github.com/MoonTory/micro-string.git",
+  "author": "Gustavo Quinta | MoonTory <gustavoqnt40@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lerna:bootstrap": "lerna bootstrap",
+    "lerna:build": "lerna build",
+    "lerna:new-version": "lerna version --conventional-commits --no-git-tag-version --no-push -y",
+    "lerna:diff": "lerna diff",
+    "lerna:commit": "npm run lerna:new-version && git add . && git commit -m \"chore: Lerna Version Bump :tada:\"",
+    "lerna:commit-push": "git push origin develop"
+  },
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  }
+}
