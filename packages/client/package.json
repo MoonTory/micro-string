@@ -6,7 +6,9 @@
 	"scripts": {
 		"start:dev": "webpack-dev-server --mode development",
 		"build:dev": "webpack --mode development --progress",
-		"build": "webpack --mode production --progress"
+		"build": "webpack --mode production --progress",
+		"lint": "eslint src/**/*.ts",
+		"lint:fix": "prettier-eslint src/**/*.ts --write"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.6.0",
