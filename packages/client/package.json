@@ -2,6 +2,9 @@
 	"name": "@micro-service/client",
 	"version": "0.0.1",
 	"main": "index.js",
+	"repository": "https://github.com/MoonTory/micro-string.git",
+	"author": "Gustavo Quinta | MoonTory <gustavoqnt40@gmail.com>",
+	"private": true,
 	"license": "MIT",
 	"scripts": {
 		"start:dev": "webpack-dev-server --mode development",
