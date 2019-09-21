@@ -25,7 +25,7 @@
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"skipLibCheck": true,
-		"types": ["node", "react", "react-dom", "react-router-dom"],
+		"types": ["node", "react", "react-dom"],
 		"baseUrl": "./",
 		"paths": {
 			"*": ["node_modules"]
