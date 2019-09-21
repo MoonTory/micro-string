@@ -1,3 +1,5 @@
+**/node_modules/**
+node_modules
 .idea/
 .vscode/
 node_modules/
@@ -9,9 +11,11 @@ dist/
 *.env
 storybook-static/
 
-data/
+yarn.*
+
 ormconfig.*
 
+*.lock
 
 # dependencies
 /node_modules
@@ -26,9 +30,6 @@ ormconfig.*
 /build
 **/build/**
 
-/dist
-**/dist/**
-
 # misc
 .env
 .DS_Store
@@ -41,3 +42,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 yarn.lock
+
+info.md
