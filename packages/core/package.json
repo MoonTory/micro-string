@@ -1,6 +1,6 @@
 {
   "name": "@micro-string/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "repository": "https://github.com/MoonTory/micro-string.git",
   "author": "Gustavo Quinta | MoonTory <gustavoqnt40@gmail.com>",
@@ -29,8 +29,8 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@micro-string/common": "^0.0.1",
     "cors": "^2.8.5",
+    "@micro-string/common": "^0.0.2",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "mongoose": "^5.7.1"
