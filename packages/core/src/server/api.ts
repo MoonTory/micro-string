@@ -5,7 +5,6 @@ import { importAllControllers } from '../helpers/importAllControllers';
 
 export class MicroAPI {
 	private static _instance: MicroAPI;
-	private readonly _path: string = '/api';
 	private readonly _config: IConfig;
 	public router: Router;
 
@@ -21,7 +20,7 @@ export class MicroAPI {
 
 	private initialize(controllers: IController[]) {
 		controllers.forEach((el: IController) => {
-			this.router.use(this._path, el.router);
+			this.router.use(el.path(), el.router);
 		});
 	}
 

@@ -1,0 +1,29 @@
+@import '~bulma/sass/utilities/initial-variables.sass';
+@import '~bulma/sass/utilities/derived-variables.sass';
+
+.navbar {
+  h1 {
+    font-size: 1.5em;
+  }
+  .logo {
+    margin: 3px 0px 0px 0;
+    width: 48px;
+  }
+  padding: 0.8rem 0;
+  font-size: 1.2em;
+  transition: all 0.2s linear;
+  border-bottom: solid 2px $white;
+}
+
+.navbar.scroll {
+  transition: all 0.2s linear;
+  h1 {
+    font-size: 1.2em;
+  }
+  padding: 0;
+  font-size: 1em;
+  .logo {
+    margin: 0px 0px 0px 0;
+    height: 28px;
+  }
+}

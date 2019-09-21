@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+// If need, change your variables before importing Bulma
+@import '~bulma/bulma.sass';
+
+// Override font-awesome's $fa-font-path variavble & point it to the
+// 'node_modules' relative path. This is so GatsbyJs's Webpack configuration
+// resolves the paths to our font files.
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts' !default;
+
+// Any additional overrides can go here
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+
+// This is a fix for white-space that was appearing on mobile devices
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3/2),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5) {
+	html,
+	body {
+		width: 100%;
+		overflow-x: hidden;
+	}
+}
