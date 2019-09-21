@@ -11,4 +11,6 @@ export abstract class IController {
 		this._config = config;
 		this.router = Router();
 	}
+
+	public path = () => this._path;
 }

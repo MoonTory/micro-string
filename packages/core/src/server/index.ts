@@ -5,11 +5,11 @@ import express, { urlencoded, json } from 'express';
 // import compression from 'compression';
 // import morgan from 'morgan';
 // import helmet from 'helmet';
-// import cors from 'cors';
+import cors from 'cors';
 // import cookieParser from 'cookie-parser';
 
 // Middlewares
-import { ErrorHandler } from './middleware';
+import { ErrorHandler, getHostname } from './middleware';
 
 import { MicroHTTP } from './http';
 import { MicroAPI } from './api';
@@ -43,14 +43,14 @@ export class MicroServer extends IServer {
 	}
 
 	protected async config() {
-		// this._express.use(cors());
+		this._express.use(cors());
 		// this._express.use(helmet());
 		// this._express.use(compression());
 		this._express.use(json());
 		this._express.use(urlencoded({ extended: false }));
 		// this._express.use(cookieParser());
 		// this._express.use(morgan(this._config.NODE_ENV === 'development' ? 'dev' : 'dev'));
-
+		this._express.use('/hit', getHostname());
 		this._express.use(this._api.router);
 		this._express.use(ErrorHandler);
 	}
