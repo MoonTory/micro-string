@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  #Service name
+  name: core-node-svc
+spec:
+  selector:
+    app: micro-string
+  ports:
+    - protocol: TCP
+      port: 5002
+      targetPort: 5002
+  type: LoadBalancer

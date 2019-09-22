@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: core-node
+  labels:
+    #Project ID
+    app: micro-string
+spec:
+  #Run two instances of our application
+  replicas: 10
+  template:
+    metadata:
+      labels:
+        app: micro-string
+    spec:
+      #Container details
+      containers:
+        - name: core-node
+          image: gcr.io/micro-string/core-node:latest
+          imagePullPolicy: Always
+          env:
+            # We can change this to a secret
+            - name: DB_HOST
+              value: 'mongo'
+            - name: DB_PORT
+              value: '27017'
+            - name: DB_NAME
+              value: 'micro-string-db'
+          #Ports to expose
+          ports:
+            - containerPort: 5002
