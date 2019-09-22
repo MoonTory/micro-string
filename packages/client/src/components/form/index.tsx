@@ -5,20 +5,20 @@ import { AxiosResponse } from 'axios';
 
 interface Props {
 	savedString: string;
+	id: string;
 	setResponse: React.Dispatch<React.SetStateAction<AxiosResponse<any> | undefined>>;
 	setSavedString: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const Form: FunctionComponent<Props> = ({ savedString, setResponse, setSavedString }) => {
+export const Form: FunctionComponent<Props> = ({ savedString, setResponse, setSavedString, id }) => {
 	const [string, setString] = useState(savedString);
 
 	useEffect(() => {
 		setString(savedString);
-	}, [savedString]);
+	}, [savedString, id]);
 
 	const handleClick = async () => {
-		const res = await axios.patch('/string/5d85bd9074d55a30dc4de448', { string });
-		console.log('res', res);
+		const res = await axios.patch(`/string/${id === undefined ? '5d85bd9074d55a30dc4de448' : id}`, { string });
 		setResponse(res);
 		setSavedString(res.data.payload.string);
 	};

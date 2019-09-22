@@ -11,13 +11,14 @@ interface Props {}
 export const App: FunctionComponent<Props> = () => {
 	const [response, setResponse] = useState<AxiosResponse<any>>();
 	const [string, setString] = useState('');
+	const [id, setId] = useState('');
 
 	useEffect(() => {
 		async function Fetch() {
-			const res = await axios.get('/string/5d85bd9074d55a30dc4de448', {});
-			console.log('res', res);
+			const res = await axios.get('/string', {});
 			setResponse(res);
-			setString(res.data.payload.string);
+			setString(res.data.payload[0].string);
+			setId(res.data.payload[0]._id);
 		}
 		Fetch();
 	}, []);
@@ -29,7 +30,7 @@ export const App: FunctionComponent<Props> = () => {
 				<div className="container" style={{ marginTop: '4rem' }}>
 					<div className="columns">
 						<div className="column">
-							<Form savedString={string} setSavedString={setString} setResponse={setResponse} />
+							<Form id={id} savedString={string} setSavedString={setString} setResponse={setResponse} />
 						</div>
 						<div className="column">
 							<Status status={response ? response.status.toString() : ''} message={response ? response.data.message : ''} />
