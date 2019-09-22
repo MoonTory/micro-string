@@ -16,7 +16,7 @@ export class Get extends EndpointFunction {
 			}
 
 			const strings = await stringModel.find().exec();
-			return this.ok(strings);
+			return this.ok({ payload: strings, message: `Node - ${os.hostname()}` });
 		} catch (error) {
 			this.next(error);
 		}
