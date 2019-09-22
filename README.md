@@ -13,7 +13,7 @@
     <a href="https://github.com/MoonTory/micro-string"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://ecstatic-wilson-6ac518.netlify.com/">View Demo</a>
+    <a href="http://34.95.190.131/">View Demo</a>
     ·
     <a href="https://github.com/MoonTory/micro-string/issues">Report Bug</a>
     ·
