@@ -7,7 +7,7 @@ metadata:
     app: micro-string
 spec:
   #Run two instances of our application
-  replicas: 10
+  replicas: 2
   template:
     metadata:
       labels:
@@ -21,11 +21,11 @@ spec:
           env:
             # We can change this to a secret
             - name: DB_HOST
-              value: 'mongo'
+              value: "mongo"
             - name: DB_PORT
-              value: '27017'
+              value: "27017"
             - name: DB_NAME
-              value: 'micro-string-db'
+              value: "micro-string-db"
           #Ports to expose
           ports:
             - containerPort: 5002
