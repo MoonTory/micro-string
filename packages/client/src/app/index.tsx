@@ -14,13 +14,12 @@ export const App: FunctionComponent<Props> = () => {
 	const [id, setId] = useState('');
 
 	useEffect(() => {
-		async function Fetch() {
+		(async () => {
 			const res = await axios.get('/string', {});
 			setResponse(res);
 			setString(res.data.payload[0].string);
 			setId(res.data.payload[0]._id);
-		}
-		Fetch();
+		})();
 	}, []);
 
 	return (

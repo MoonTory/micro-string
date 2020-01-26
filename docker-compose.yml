@@ -20,6 +20,26 @@ services:
     networks:
       - balance
 
+  core-go:
+    image: gcr.io/micro-string/core-go:latest
+    build:
+      context: ./
+      dockerfile: ./packages/core-go/Dockerfile
+    ports:
+      - '5003:5003'
+    depends_on:
+      - 'mongo'
+    deploy:
+      replicas: 3
+      restart_policy:
+        max_attempts: 3
+        condition: on-failure
+      update_config:
+        parallelism: 3
+        delay: 10s
+    networks:
+      - balance
+
   proxy:
     image: nginx:alpine
     ports:
