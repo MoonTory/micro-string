@@ -1,0 +1,5 @@
+{
+	"events": {
+		"restart": "kill -2 $(lsof -ti :5003)"
+	}
+}
