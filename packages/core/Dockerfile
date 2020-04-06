@@ -2,6 +2,9 @@ FROM node:10-alpine
 
 WORKDIR /micro-string
 
+RUN mkdir ./core
+RUN mkdir ./common
+
 COPY ./package.json .
 COPY ./packages/core/package.json ./packages/core/
 COPY ./packages/common/package.json ./packages/common/
